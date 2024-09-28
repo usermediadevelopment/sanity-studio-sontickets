@@ -27,3 +27,11 @@
 
 # Dotenv and similar local-only files
 *.local
+
+
+# Igoring .env files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
