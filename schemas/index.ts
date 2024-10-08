@@ -6,7 +6,7 @@ import { reviewSchema } from "./review";
 import { socialMediaSchema } from "./socialMedia";
 import { locationSchema } from './location'
 import { menuCategorySchema } from './menuCategory'
-import { menuItemSchema } from './menuItem.js'
+import { menuItemSchema } from './menuItem'
 import { seoSchema } from './seo'
 import { citySchema } from './city'
 import { areaSchema } from './area'

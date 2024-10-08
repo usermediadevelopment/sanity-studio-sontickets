@@ -3,7 +3,7 @@ import { visionTool } from '@sanity/vision'
 
 import { schemaTypes } from './schemas'
 import { structureTool } from 'sanity/structure'
-import { structure } from './structure'
+
 import { googleMapsInput } from '@sanity/google-maps-input'
 
 
