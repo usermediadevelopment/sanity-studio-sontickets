@@ -1,55 +1,65 @@
-// ./schemas/menuItem.ts
-import {defineType, defineField} from 'sanity'
+import { defineType, defineField } from 'sanity';
 
-export const menuItemSchema =  defineType({
+export const menuItemSchema = defineType({
   name: 'menuItem',
   title: 'Menu Item',
-  type: 'document',
+  type: 'object',
   fields: [
     defineField({
-      name: 'name',
+      name: 'dishName',
       title: 'Dish Name',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'description',
-      title: 'Dish Description',
+      title: 'Description',
       type: 'text',
     }),
     defineField({
       name: 'price',
       title: 'Price',
       type: 'number',
-      validation: (Rule) => Rule.min(0),
+      validation: (Rule) => Rule.required().positive(),
     }),
     defineField({
       name: 'photo',
       title: 'Photo',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
     }),
     defineField({
-      name: 'dietaryInfo',
-      title: 'Dietary Information',
+      name: 'allergens',
+      title: 'Allergen Information',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         list: [
-          {title: 'Vegetarian', value: 'Vegetarian'},
-          {title: 'Vegan', value: 'Vegan'},
-          {title: 'Gluten-Free', value: 'Gluten-Free'},
-          {title: 'Contains Nuts', value: 'Contains Nuts'},
+          'Gluten',
+          'Peanuts',
+          'Tree Nuts',
+          'Dairy',
+          'Eggs',
+          'Soy',
+          'Fish',
+          'Shellfish',
+          // Add more allergens as needed
         ],
       },
     }),
     defineField({
-      name: 'restaurant',
-      title: 'Restaurant',
-      type: 'reference',
-      to: [{type: 'restaurant'}],
+      name: 'isVegetarian',
+      title: 'Vegetarian',
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'isVegan',
+      title: 'Vegan',
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'isGlutenFree',
+      title: 'Gluten-Free',
+      type: 'boolean',
     }),
   ],
-})
+});

@@ -1,0 +1,65 @@
+{"_type":"category","_id":"category-fine-dining","name":"Fine Dining","slug":{"_type":"slug","current":"fine-dining"}}
+{"_type":"category","_id":"category-casual","name":"Casual","slug":{"_type":"slug","current":"casual"}}
+{"_type":"category","_id":"category-sushi","name":"Sushi","slug":{"_type":"slug","current":"sushi"}}
+{"_type":"category","_id":"category-italian","name":"Italian","slug":{"_type":"slug","current":"italian"}}
+{"_type":"category","_id":"category-vegan","name":"Vegan","slug":{"_type":"slug","current":"vegan"}}
+
+{"_type":"city","_id":"city-downtown","name":"Downtown","slug":{"_type":"slug","current":"downtown"}}
+{"_type":"city","_id":"city-suburbia","name":"Suburbia","slug":{"_type":"slug","current":"suburbia"}}
+{"_type":"city","_id":"city-hillside","name":"Hillside","slug":{"_type":"slug","current":"hillside"}}
+{"_type":"city","_id":"city-seaview","name":"Seaview","slug":{"_type":"slug","current":"seaview"}}
+{"_type":"city","_id":"city-portside","name":"Portside","slug":{"_type":"slug","current":"portside"}}
+
+{"_type":"area","_id":"area-central","name":"Central","city":{"_type":"reference","_ref":"city-downtown"},"slug":{"_type":"slug","current":"central"}}
+{"_type":"area","_id":"area-riverside","name":"Riverside","city":{"_type":"reference","_ref":"city-suburbia"},"slug":{"_type":"slug","current":"riverside"}}
+{"_type":"area","_id":"area-hillside","name":"Hillside","city":{"_type":"reference","_ref":"city-hillside"},"slug":{"_type":"slug","current":"hillside"}}
+{"_type":"area","_id":"area-sea","name":"Sea","city":{"_type":"reference","_ref":"city-seaview"},"slug":{"_type":"slug","current":"sea"}}
+{"_type":"area","_id":"area-harbor","name":"Harbor","city":{"_type":"reference","_ref":"city-portside"},"slug":{"_type":"slug","current":"harbor"}}
+
+{"_type":"country","_id":"country-us","name":"United States", "code":"US"}
+{"_type":"country","_id":"country-ca","name":"Canada", "code":"CA"}
+{"_type":"country","_id":"01747d69-5356-4439-9f42-0e82455c911f","name":"Colombia", "code":"CO"}
+
+{"_type":"contactInfo","_id":"contact-bistro-delight","phone":"+1234567890","email":"info@bistrodelight.com"}
+{"_type":"contactInfo","_id":"contact-urban-grill","phone":"+1234567892","email":"info@urbangrill.com"}
+{"_type":"contactInfo","_id":"contact-sushi-haven","phone":"+1234567894","email":"info@sushihaven.com"}
+{"_type":"contactInfo","_id":"contact-italiano-paradiso","phone":"+1234567896","email":"info@italianoparadiso.com"}
+{"_type":"contactInfo","_id":"contact-green-bites","phone":"+1234567897","email":"info@greenbites.com"}
+{"_type":"contactInfo","_id":"contact-seafood-house","phone":"+1234567898","email":"info@seafoodhouse.com"}
+{"_type":"contactInfo","_id":"contact-river-view-diner","phone":"+1234567899","email":"info@riverviewdiner.com"}
+{"_type":"contactInfo","_id":"contact-sunset-bistro","phone":"+1234567801","email":"info@sunsetbistro.com"}
+{"_type":"contactInfo","_id":"contact-harbor-grill","phone":"+1234567802","email":"info@harborgrill.com"}
+{"_type":"contactInfo","_id":"contact-mountain-top-eatery","phone":"+1234567803","email":"info@mountaintop.com"}
+
+{"_type":"openingHour","_id":"opening-hour-bistro-delight","days":"Monday - Friday","hours":"11:00 AM - 10:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-urban-grill","days":"Monday - Sunday","hours":"12:00 PM - 11:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-sushi-haven","days":"Tuesday - Sunday","hours":"1:00 PM - 9:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-italiano-paradiso","days":"Monday - Saturday","hours":"11:30 AM - 10:30 PM"}
+{"_type":"openingHour","_id":"opening-hour-green-bites","days":"Monday - Sunday","hours":"10:00 AM - 8:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-seafood-house","days":"Monday - Sunday","hours":"12:00 PM - 10:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-river-view-diner","days":"Wednesday - Sunday","hours":"7:00 AM - 9:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-sunset-bistro","days":"Monday - Friday","hours":"4:00 PM - 11:00 PM"}
+{"_type":"openingHour","_id":"opening-hour-harbor-grill","days":"Friday - Sunday","hours":"5:00 PM - 12:00 AM"}
+{"_type":"openingHour","_id":"opening-hour-mountain-top-eatery","days":"Monday - Saturday","hours":"8:00 AM - 8:00 PM"}
+
+{"_type":"restaurant","_id":"restaurant-1","name":"Bistro Delight","description":"A cozy spot offering gourmet dishes and a warm atmosphere.","categories":[{"_type":"reference","_ref":"category-fine-dining"}],"slug":{"_type":"slug","current":"bistro-delight"}}
+{"_type":"restaurant","_id":"restaurant-2","name":"Urban Grill","description":"Grilled specialties and a vibrant urban setting.","categories":[{"_type":"reference","_ref":"category-casual"}],"slug":{"_type":"slug","current":"urban-grill"}}
+{"_type":"restaurant","_id":"restaurant-3","name":"Sushi Haven","description":"Authentic Japanese sushi prepared fresh.","categories":[{"_type":"reference","_ref":"category-sushi"}],"slug":{"_type":"slug","current":"sushi-haven"}}
+{"_type":"restaurant","_id":"restaurant-4","name":"Italiano Paradiso","description":"Traditional Italian cuisine with a modern twist.","categories":[{"_type":"reference","_ref":"category-italian"}],"slug":{"_type":"slug","current":"italiano-paradiso"}}
+{"_type":"restaurant","_id":"restaurant-5","name":"Green Bites","description":"Vegan delights made fresh daily.","categories":[{"_type":"reference","_ref":"category-vegan"}],"slug":{"_type":"slug","current":"green-bites"}}
+{"_type":"restaurant","_id":"restaurant-6","name":"Seafood House","description":"Fresh seafood caught daily.","categories":[{"_type":"reference","_ref":"category-fine-dining"}],"slug":{"_type":"slug","current":"seafood-house"}}
+{"_type":"restaurant","_id":"restaurant-7","name":"River View Diner","description":"Casual dining with a view of the river.","categories":[{"_type":"reference","_ref":"category-casual"}],"slug":{"_type":"slug","current":"river-view-diner"}}
+{"_type":"restaurant","_id":"restaurant-8","name":"Sunset Bistro","description":"Fine dining with sunset views.","categories":[{"_type":"reference","_ref":"category-fine-dining"}],"slug":{"_type":"slug","current":"sunset-bistro"}}
+{"_type":"restaurant","_id":"restaurant-9","name":"Harbor Grill","description":"Grilled meats and seafood by the harbor.","categories":[{"_type":"reference","_ref":"category-casual"}],"slug":{"_type":"slug","current":"harbor-grill"}}
+{"_type":"restaurant","_id":"restaurant-10","name":"Mountain Top Eatery","description":"Cozy meals at the top of the mountain.","categories":[{"_type":"reference","_ref":"category-casual"}],"slug":{"_type":"slug","current":"mountain-top-eatery"}}
+
+{"_type":"location","_id":"location-1","name":"Bistro Delight Downtown","restaurant":{"_type":"reference","_ref":"restaurant-1"},"address":"123 Gourmet St, Downtown","city":{"_type":"reference","_ref":"city-downtown"},"area":{"_type":"reference","_ref":"area-central"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-bistro-delight"},"schedule":[{"_type":"reference","_ref":"opening-hour-bistro-delight"}]}
+{"_type":"location","_id":"location-2","name":"Urban Grill Downtown","restaurant":{"_type":"reference","_ref":"restaurant-2"},"address":"456 Grill Lane, Downtown","city":{"_type":"reference","_ref":"city-downtown"},"area":{"_type":"reference","_ref":"area-central"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-urban-grill"},"schedule":[{"_type":"reference","_ref":"opening-hour-urban-grill"}]}
+{"_type":"location","_id":"location-3","name":"Sushi Haven Seaview","restaurant":{"_type":"reference","_ref":"restaurant-3"},"address":"789 Sushi Ave, Seaview","city":{"_type":"reference","_ref":"city-seaview"},"area":{"_type":"reference","_ref":"area-sea"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-sushi-haven"},"schedule":[{"_type":"reference","_ref":"opening-hour-sushi-haven"}]}
+{"_type":"location","_id":"location-4","name":"Italiano Paradiso Downtown","restaurant":{"_type":"reference","_ref":"restaurant-4"},"address":"1010 Pasta Rd, Downtown","city":{"_type":"reference","_ref":"city-downtown"},"area":{"_type":"reference","_ref":"area-central"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-italiano-paradiso"},"schedule":[{"_type":"reference","_ref":"opening-hour-italiano-paradiso"}]}
+{"_type":"location","_id":"location-5","name":"Green Bites Suburbia","restaurant":{"_type":"reference","_ref":"restaurant-5"},"address":"1212 Green St, Suburbia","city":{"_type":"reference","_ref":"city-suburbia"},"area":{"_type":"reference","_ref":"area-riverside"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-green-bites"},"schedule":[{"_type":"reference","_ref":"opening-hour-green-bites"}]}
+{"_type":"location","_id":"location-6","name":"Seafood House Seaview","restaurant":{"_type":"reference","_ref":"restaurant-6"},"address":"1313 Ocean Blvd, Seaview","city":{"_type":"reference","_ref":"city-seaview"},"area":{"_type":"reference","_ref":"area-sea"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-seafood-house"},"schedule":[{"_type":"reference","_ref":"opening-hour-seafood-house"}]}
+{"_type":"location","_id":"location-7","name":"River View Diner Riverside","restaurant":{"_type":"reference","_ref":"restaurant-7"},"address":"1414 River Rd, Riverside","city":{"_type":"reference","_ref":"city-hillside"},"area":{"_type":"reference","_ref":"area-riverside"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-river-view-diner"},"schedule":[{"_type":"reference","_ref":"opening-hour-river-view-diner"}]}
+{"_type":"location","_id":"location-8","name":"Sunset Bistro Hillside","restaurant":{"_type":"reference","_ref":"restaurant-8"},"address":"1515 Sunset Ave, Hillside","city":{"_type":"reference","_ref":"city-hillside"},"area":{"_type":"reference","_ref":"area-hillside"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-sunset-bistro"},"schedule":[{"_type":"reference","_ref":"opening-hour-sunset-bistro"}]}
+{"_type":"location","_id":"location-9","name":"Harbor Grill Portside","restaurant":{"_type":"reference","_ref":"restaurant-9"},"address":"1616 Harbor Blvd, Portside","city":{"_type":"reference","_ref":"city-portside"},"area":{"_type":"reference","_ref":"area-harbor"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-harbor-grill"},"schedule":[{"_type":"reference","_ref":"opening-hour-harbor-grill"}]}
+{"_type":"location","_id":"location-10","name":"Mountain Top Eatery Hillside","restaurant":{"_type":"reference","_ref":"restaurant-10"},"address":"1717 Mountain Rd, Hillside","city":{"_type":"reference","_ref":"city-hillside"},"area":{"_type":"reference","_ref":"area-hillside"},"country":{"_type":"reference","_ref":"country-us"},"contact":{"_type":"reference","_ref":"contact-mountain-top-eatery"},"schedule":[{"_type":"reference","_ref":"opening-hour-mountain-top-eatery"}]}

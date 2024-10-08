@@ -1,7 +1,6 @@
-// ./schemas/socialMedia.ts
-import {defineType, defineField} from 'sanity'
+import { defineType, defineField } from 'sanity';
 
-export const socialMediaSchema =  defineType({
+export const socialMediaSchema = defineType({
   name: 'socialMedia',
   title: 'Social Media',
   type: 'object',
@@ -12,17 +11,22 @@ export const socialMediaSchema =  defineType({
       type: 'string',
       options: {
         list: [
-          {title: 'Facebook', value: 'facebook'},
-          {title: 'Instagram', value: 'instagram'},
-          {title: 'Twitter', value: 'twitter'},
-          {title: 'LinkedIn', value: 'linkedin'},
+          { title: 'Facebook', value: 'Facebook' },
+          { title: 'Twitter', value: 'Twitter' },
+          { title: 'Instagram', value: 'Instagram' },
+          { title: 'LinkedIn', value: 'LinkedIn' },
+          { title: 'TikTok', value: 'TikTok' },
+          { title: 'YouTube', value: 'YouTube' },
+          // Add more platforms as needed
         ],
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'url',
-      title: 'URL',
+      title: 'Profile URL',
       type: 'url',
+      validation: (Rule) => Rule.required().uri({ allowRelative: false }),
     }),
   ],
-})
+});
