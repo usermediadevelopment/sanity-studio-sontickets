@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity';
+import {defineType, defineField} from 'sanity'
 
 export const restaurantSchema = defineType({
   name: 'restaurant',
@@ -41,7 +41,7 @@ export const restaurantSchema = defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'category' }] }],
+      of: [{type: 'reference', to: [{type: 'category'}]}],
       validation: (Rule) => Rule.required().min(1),
     }),
     defineField({
@@ -53,7 +53,7 @@ export const restaurantSchema = defineType({
       name: 'socialMedia',
       title: 'Social Media Links',
       type: 'array',
-      of: [{ type: 'socialMedia' }],
+      of: [{type: 'socialMedia'}],
     }),
     defineField({
       name: 'seo',
@@ -61,4 +61,4 @@ export const restaurantSchema = defineType({
       type: 'seo',
     }),
   ],
-});
+})
