@@ -1,5 +1,12 @@
 import {defineType, defineField} from 'sanity'
-import {dietaryPreferencesOptions} from './data/amenities'
+import {
+  ambianceOptions,
+  dietaryPreferencesOptions,
+  entertainmentOptions,
+  facilitiesOptions,
+  paymentOptions,
+  suitableForOptions,
+} from './data/amenities'
 
 export const locationSchema = defineType({
   name: 'location',
@@ -90,7 +97,7 @@ export const locationSchema = defineType({
       of: [{type: 'openingHour'}],
     }),
 
-    // 1. Restricciones y Preferencias Dietéticas (Campo personalizado)
+    // 1. Restricciones y Preferencias Dietéticas
     defineField({
       name: 'dietaryPreferences',
       title: 'Preferencias Dietéticas',
@@ -98,6 +105,61 @@ export const locationSchema = defineType({
       of: [{type: 'string'}],
       options: {
         list: dietaryPreferencesOptions,
+      },
+    }),
+
+    // 2. Ambiente y Experiencia
+    defineField({
+      name: 'ambiance',
+      title: 'Ambiente y Experiencia',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: ambianceOptions,
+      },
+    }),
+
+    // 3. Servicios y Facilidades
+    defineField({
+      name: 'facilities',
+      title: 'Servicios y Facilidades',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: facilitiesOptions,
+      },
+    }),
+
+    // 4. Entretenimiento y Eventos
+    defineField({
+      name: 'entertainment',
+      title: 'Entretenimiento y Eventos',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: entertainmentOptions,
+      },
+    }),
+
+    // 6. Adecuado para
+    defineField({
+      name: 'suitableFor',
+      title: 'Adecuado para',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: suitableForOptions,
+      },
+    }),
+
+    // 9. Opciones de Pago y Reservación
+    defineField({
+      name: 'paymentOptions',
+      title: 'Opciones de Pago y Reservación',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: paymentOptions,
       },
     }),
     defineField({
