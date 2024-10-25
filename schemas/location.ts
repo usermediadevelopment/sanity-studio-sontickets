@@ -1,4 +1,5 @@
 import {defineType, defineField} from 'sanity'
+import {dietaryPreferencesOptions} from './data/amenities'
 
 export const locationSchema = defineType({
   name: 'location',
@@ -87,6 +88,17 @@ export const locationSchema = defineType({
       title: 'Operating Hours',
       type: 'array',
       of: [{type: 'openingHour'}],
+    }),
+
+    // 1. Restricciones y Preferencias Dietéticas (Campo personalizado)
+    defineField({
+      name: 'dietaryPreferences',
+      title: 'Preferencias Dietéticas',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: dietaryPreferencesOptions,
+      },
     }),
     defineField({
       name: 'contact',

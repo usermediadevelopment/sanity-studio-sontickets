@@ -16,6 +16,8 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/base": "^2.36.2",
+    "@sanity/form-builder": "^2.36.2",
     "@sanity/google-maps-input": "^4.0.1",
     "@sanity/vision": "^3.60.0",
     "react": "^18.3.1",

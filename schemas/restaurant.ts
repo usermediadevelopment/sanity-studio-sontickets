@@ -1,4 +1,12 @@
 import {defineType, defineField} from 'sanity'
+import {
+  ambianceOptions,
+  dietaryPreferencesOptions,
+  entertainmentOptions,
+  facilitiesOptions,
+  paymentOptions,
+  suitableForOptions,
+} from './data/amenities'
 
 export const restaurantSchema = defineType({
   name: 'restaurant',
@@ -45,124 +53,69 @@ export const restaurantSchema = defineType({
       validation: (Rule) => Rule.required().min(1),
     }),
 
+    // 1. Restricciones y Preferencias Dietéticas
     defineField({
       name: 'dietaryPreferences',
-      title: 'Dietary Preferences',
+      title: 'Preferencias Dietéticas',
       type: 'array',
       of: [{type: 'string'}],
       options: {
-        list: [
-          {title: 'Vegetariano', value: 'vegetarian'},
-          {title: 'Vegano', value: 'vegan'},
-          {title: 'Sin gluten', value: 'glutenFree'},
-          {title: 'Keto', value: 'keto'},
-          {title: 'Sin lactosa', value: 'lactoseFree'},
-          {title: 'Orgánico', value: 'organic'},
-          {title: 'Halal', value: 'halal'},
-          {title: 'Kosher', value: 'kosher'},
-          {title: 'Paleo', value: 'paleo'},
-          {title: 'Sin azúcar', value: 'sugarFree'},
-          // Añadir más preferencias si es necesario
-        ],
+        list: dietaryPreferencesOptions,
       },
     }),
 
+    // 2. Ambiente y Experiencia
     defineField({
       name: 'ambiance',
-      title: 'Ambiance and Experience',
+      title: 'Ambiente y Experiencia',
       type: 'array',
       of: [{type: 'string'}],
       options: {
-        list: [
-          {title: 'Al aire libre', value: 'outdoor'},
-          {title: 'Terraza', value: 'terrace'},
-          {title: 'Vista panorámica', value: 'scenicView'},
-          {title: 'Decoración temática', value: 'thematicDecoration'},
-          {title: 'Ambiente familiar', value: 'familyFriendly'},
-          {title: 'Para citas románticas', value: 'romantic'},
-          {title: 'Zona de baile', value: 'danceArea'},
-          {title: 'Pet-friendly', value: 'petFriendly'},
-          {title: 'Se permite fumar', value: 'smokingAllowed'},
-        ],
-      },
-    }),
-    defineField({
-      name: 'facilities',
-      title: 'Facilities and Services',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Wi-Fi gratuito', value: 'freeWifi'},
-          {title: 'Reservación en línea', value: 'onlineReservation'},
-          {title: 'Servicio de bar completo', value: 'fullBarService'},
-          {title: 'Carta de vinos', value: 'wineList'},
-          {title: 'Carta de cocteles', value: 'cocktailMenu'},
-          {title: 'Menú infantil', value: 'kidsMenu'},
-          {title: 'Acceso para discapacitados', value: 'accessible'},
-          {title: 'Aparcamiento gratuito', value: 'freeParking'},
-          {title: 'Entrega a domicilio', value: 'homeDelivery'},
-          {title: 'Para llevar', value: 'takeaway'},
-          // Añadir más facilidades si es necesario
-        ],
-      },
-    }),
-    defineField({
-      name: 'entertainment',
-      title: 'Entertainment and Events',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Música en vivo', value: 'liveMusic'},
-          {title: 'Música de DJ', value: 'djMusic'},
-          {title: 'Happy hour', value: 'happyHour'},
-          {title: 'Eventos temáticos', value: 'themedEvents'},
-          {title: 'Proyección de deportes en vivo', value: 'liveSports'},
-          {title: 'Karaoke', value: 'karaoke'},
-          {title: 'Shows de comedia', value: 'comedyShows'},
-          {title: 'Noches de trivia', value: 'triviaNights'},
-          // Añadir más eventos si es necesario
-        ],
+        list: ambianceOptions,
       },
     }),
 
+    // 3. Servicios y Facilidades
     defineField({
-      name: 'locationFeatures',
-      title: 'Location and Environment',
+      name: 'facilities',
+      title: 'Servicios y Facilidades',
       type: 'array',
       of: [{type: 'string'}],
       options: {
-        list: [
-          {title: 'Cerca de puntos turísticos', value: 'nearTouristSpots'},
-          {title: 'Ubicación céntrica', value: 'centralLocation'},
-          {title: 'Ambiente rural', value: 'ruralSetting'},
-          {title: 'Cerca de la playa', value: 'nearBeach'},
-          {title: 'En hoteles', value: 'inHotels'},
-          {title: 'Fácil acceso al transporte público', value: 'easyTransportAccess'},
-          {title: 'En el casco histórico', value: 'historicalArea'},
-          {title: 'En centros comerciales', value: 'shoppingCenter'},
-          // Añadir más opciones de ubicación si es necesario
-        ],
+        list: facilitiesOptions,
       },
     }),
+
+    // 4. Entretenimiento y Eventos
     defineField({
-      name: 'paymentOptions',
-      title: 'Payment and Reservation Options',
+      name: 'entertainment',
+      title: 'Entretenimiento y Eventos',
       type: 'array',
       of: [{type: 'string'}],
       options: {
-        list: [
-          {title: 'Acepta pagos con tarjeta', value: 'creditCardAccepted'},
-          {title: 'Pago móvil (Apple Pay, Google Pay)', value: 'mobilePayment'},
-          {title: 'Acepta vales de comida', value: 'mealVouchersAccepted'},
-          {title: 'Reservación telefónica', value: 'phoneReservation'},
-          {title: 'Política de cancelación flexible', value: 'flexibleCancellation'},
-          {title: 'División de cuentas', value: 'billSplitting'},
-          {title: 'Descuentos para miembros', value: 'memberDiscounts'},
-          {title: 'Programa de fidelización', value: 'loyaltyProgram'},
-          // Añadir más opciones de pago si es necesario
-        ],
+        list: entertainmentOptions,
+      },
+    }),
+
+    // 6. Adecuado para
+    defineField({
+      name: 'suitableFor',
+      title: 'Adecuado para',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: suitableForOptions,
+      },
+    }),
+
+    // 9. Opciones de Pago y Reservación
+    defineField({
+      name: 'paymentOptions',
+      title: 'Opciones de Pago y Reservación',
+      type: 'array',
+      of: [{type: 'string'}],
+      options: {
+        list: paymentOptions,
       },
     }),
     defineField({
