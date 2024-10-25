@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity';
+import {defineType, defineField} from 'sanity'
 
 export const menuItemSchema = defineType({
   name: 'menuItem',
@@ -31,7 +31,7 @@ export const menuItemSchema = defineType({
       name: 'allergens',
       title: 'Allergen Information',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [{type: 'string'}],
       options: {
         list: [
           'Gluten',
@@ -62,4 +62,4 @@ export const menuItemSchema = defineType({
       type: 'boolean',
     }),
   ],
-});
+})

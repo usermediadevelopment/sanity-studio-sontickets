@@ -93,21 +93,7 @@ export const locationSchema = defineType({
       title: 'Contact Information',
       type: 'contactInfo',
     }),
-    defineField({
-      name: 'services',
-      title: 'Services Offered',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Dine-In', value: 'dine-in'},
-          {title: 'Takeaway', value: 'takeaway'},
-          {title: 'Delivery', value: 'delivery'},
-          {title: 'Outdoor Seating', value: 'outdoor-seating'},
-          // Add more services as needed
-        ],
-      },
-    }),
+
     defineField({
       name: 'reservation',
       title: 'Online Reservation Available',

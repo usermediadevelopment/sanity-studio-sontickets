@@ -1,4 +1,4 @@
-import { defineType, defineField } from 'sanity';
+import {defineType, defineField} from 'sanity'
 
 export const openingHourSchema = defineType({
   name: 'openingHour',
@@ -11,13 +11,13 @@ export const openingHourSchema = defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Monday', value: 'Monday' },
-          { title: 'Tuesday', value: 'Tuesday' },
-          { title: 'Wednesday', value: 'Wednesday' },
-          { title: 'Thursday', value: 'Thursday' },
-          { title: 'Friday', value: 'Friday' },
-          { title: 'Saturday', value: 'Saturday' },
-          { title: 'Sunday', value: 'Sunday' },
+          {title: 'Monday', value: 'Monday'},
+          {title: 'Tuesday', value: 'Tuesday'},
+          {title: 'Wednesday', value: 'Wednesday'},
+          {title: 'Thursday', value: 'Thursday'},
+          {title: 'Friday', value: 'Friday'},
+          {title: 'Saturday', value: 'Saturday'},
+          {title: 'Sunday', value: 'Sunday'},
         ],
       },
       validation: (Rule) => Rule.required(),
@@ -38,4 +38,4 @@ export const openingHourSchema = defineType({
       type: 'boolean',
     }),
   ],
-});
+})
