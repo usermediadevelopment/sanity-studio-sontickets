@@ -118,6 +118,50 @@ export const restaurantSchema = defineType({
         list: paymentOptions,
       },
     }),
+
+    defineField({
+      name: 'priceRange',
+      title: 'Price Range',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'minPrice',
+          title: 'Minimum Price',
+          type: 'number',
+          validation: (Rule) => Rule.required().min(0),
+        }),
+        defineField({
+          name: 'maxPrice',
+          title: 'Maximum Price',
+          type: 'number',
+          validation: (Rule) =>
+            Rule.required()
+              .min(0)
+              .custom((maxPrice, context) => {
+                const {minPrice} = context.parent as {minPrice: number}
+                if (minPrice !== undefined && maxPrice !== undefined && maxPrice < minPrice) {
+                  return 'Maximum price should be greater than or equal to minimum price'
+                }
+                return true
+              }),
+        }),
+        defineField({
+          name: 'currency',
+          title: 'Currency',
+          type: 'string',
+          options: {
+            list: [
+              {title: 'COP', value: 'COP'},
+              {title: 'EUR', value: 'EUR'},
+              {title: 'GBP', value: 'GBP'},
+              // Add more currencies as needed
+            ],
+          },
+          initialValue: 'USD',
+          validation: (Rule) => Rule.required(),
+        }),
+      ],
+    }),
     defineField({
       name: 'contactEmail',
       title: 'Contact Email',
