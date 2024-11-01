@@ -39,6 +39,12 @@ export const restaurantSchema = defineType({
       title: 'Logo',
       type: 'image',
     }),
+
+    defineField({
+      name: 'reservationUrl',
+      title: 'Online Reservation URL',
+      type: 'url',
+    }),
     defineField({
       name: 'website',
       title: 'Website URL',

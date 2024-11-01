@@ -1418,6 +1418,13 @@
         },
         "optional": true
       },
+      "reservationUrl": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "website": {
         "type": "objectAttribute",
         "value": {

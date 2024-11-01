@@ -1,5 +1,5 @@
 {
-  "path": "../sontickets-best-restaurants/src/**/*.{ts,tsx,js,jsx}",
+  "path": "../best-restaurants/src/**/*.{ts,tsx,js,jsx}",
   "schema": "./schema.json",
-  "generates": "../sontickets-best-restaurants/src/types/sanity.ts"
+  "generates": "../best-restaurants/src/types/sanity.ts"
 }
