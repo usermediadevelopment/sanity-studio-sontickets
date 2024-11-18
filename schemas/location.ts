@@ -29,6 +29,12 @@ export const locationSchema = defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+    }),
     defineField({
       name: 'restaurant',
       title: 'Restaurant',
@@ -37,7 +43,7 @@ export const locationSchema = defineType({
     }),
 
     defineField({
-      name: 'google_place_id',
+      name: 'googlePlaceId',
       title: 'Google Place ID',
       type: 'string',
       validation: (Rule) => Rule.required(),
@@ -106,7 +112,7 @@ export const locationSchema = defineType({
 
     // 5. Procedimientos
     defineField({
-      name: 'outstanding_features',
+      name: 'outstandingFeatures',
       title: 'Aspectos sobresalientes',
       type: 'array',
       of: [{type: 'string'}],

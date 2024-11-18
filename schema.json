@@ -602,6 +602,13 @@
         },
         "optional": true
       },
+      "description": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "restaurant": {
         "type": "objectAttribute",
         "value": {
@@ -632,7 +639,7 @@
         },
         "optional": true
       },
-      "google_place_id": {
+      "googlePlaceId": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
@@ -871,7 +878,7 @@
         },
         "optional": true
       },
-      "outstanding_features": {
+      "outstandingFeatures": {
         "type": "objectAttribute",
         "value": {
           "type": "array",
