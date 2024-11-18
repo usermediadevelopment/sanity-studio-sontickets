@@ -37,6 +37,13 @@ export const locationSchema = defineType({
     }),
 
     defineField({
+      name: 'google_place_id',
+      title: 'Google Place ID',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+
+    defineField({
       name: 'country',
       title: 'Country',
       type: 'reference',
@@ -95,6 +102,14 @@ export const locationSchema = defineType({
       title: 'Operating Hours',
       type: 'array',
       of: [{type: 'openingHour'}],
+    }),
+
+    // 5. Procedimientos
+    defineField({
+      name: 'outstanding_features',
+      title: 'Aspectos sobresalientes',
+      type: 'array',
+      of: [{type: 'string'}],
     }),
 
     // 1. Restricciones y Preferencias Dietéticas

@@ -45,6 +45,17 @@ export const restaurantSchema = defineType({
       title: 'Online Reservation URL',
       type: 'url',
     }),
+
+    defineField({
+      name: 'pdfMenuFile',
+      title: 'PDF Menu File',
+      type: 'file',
+      options: {
+        accept: 'application/pdf',
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+
     defineField({
       name: 'website',
       title: 'Website URL',
@@ -57,72 +68,6 @@ export const restaurantSchema = defineType({
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],
       validation: (Rule) => Rule.required().min(1),
-    }),
-
-    // 1. Restricciones y Preferencias Dietéticas
-    defineField({
-      name: 'dietaryPreferences',
-      title: 'Preferencias Dietéticas',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: dietaryPreferencesOptions,
-      },
-    }),
-
-    // 2. Ambiente y Experiencia
-    defineField({
-      name: 'ambiance',
-      title: 'Ambiente y Experiencia',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: ambianceOptions,
-      },
-    }),
-
-    // 3. Servicios y Facilidades
-    defineField({
-      name: 'facilities',
-      title: 'Servicios y Facilidades',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: facilitiesOptions,
-      },
-    }),
-
-    // 4. Entretenimiento y Eventos
-    defineField({
-      name: 'entertainment',
-      title: 'Entretenimiento y Eventos',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: entertainmentOptions,
-      },
-    }),
-
-    // 6. Adecuado para
-    defineField({
-      name: 'suitableFor',
-      title: 'Adecuado para',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: suitableForOptions,
-      },
-    }),
-
-    // 9. Opciones de Pago y Reservación
-    defineField({
-      name: 'paymentOptions',
-      title: 'Opciones de Pago y Reservación',
-      type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: paymentOptions,
-      },
     }),
 
     defineField({
