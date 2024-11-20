@@ -111,6 +111,13 @@ export const locationSchema = defineType({
       of: [{type: 'openingHour'}],
     }),
 
+    defineField({
+      name: 'awards',
+      title: 'Reconocimientos',
+      type: 'array',
+      of: [{type: 'image'}],
+    }),
+
     // 5. Procedimientos
     defineField({
       name: 'outstandingFeatures',
