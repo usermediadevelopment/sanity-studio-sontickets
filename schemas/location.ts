@@ -98,6 +98,13 @@ export const locationSchema = defineType({
       type: 'array',
       of: [{type: 'image'}],
     }),
+
+    defineField({
+      name: 'awards',
+      title: 'Reconocimientos',
+      type: 'array',
+      of: [{type: 'image'}],
+    }),
     defineField({
       name: 'menu',
       title: 'Menu',
@@ -109,13 +116,6 @@ export const locationSchema = defineType({
       title: 'Operating Hours',
       type: 'array',
       of: [{type: 'openingHour'}],
-    }),
-
-    defineField({
-      name: 'awards',
-      title: 'Reconocimientos',
-      type: 'array',
-      of: [{type: 'image'}],
     }),
 
     // 5. Procedimientos
