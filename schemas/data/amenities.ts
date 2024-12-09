@@ -1,26 +1,26 @@
 export const dietaryPreferencesOptions = [
-  {title: 'Vegetariano', value: 'vegetariano'},
-  {title: 'Vegano', value: 'vegano'},
-  {title: 'Sin gluten', value: 'sin gluten'},
-  {title: 'Keto', value: 'keto'},
-  {title: 'Sin lactosa', value: 'sin lactosa'},
-  {title: 'Orgánico', value: 'orgánico'},
-  {title: 'Halal', value: 'halal'},
-  {title: 'Kosher', value: 'kosher'},
-  {title: 'Paleo', value: 'paleo'},
-  {title: 'Sin azúcar', value: 'sin azúcar'},
+  {title: 'Opciones vegetarianas', value: 'vegetariano'},
+  {title: 'Opciones veganas', value: 'vegano'},
+  {title: 'Opciones sin gluten', value: 'sin gluten'},
+  {title: 'Opciones Keto(Dieta baja en carbohidratos)', value: 'keto'},
+  {title: 'Opciones sin lactosa', value: 'sin lactosa'},
+  {title: 'Opciones orgánicas', value: 'orgánico'},
+  {title: 'Opciones Halal(Alimentos islámicos)', value: 'halal'},
+  {title: 'Opciones Kosher(Normas de dieta judías)', value: 'kosher'},
+  {title: 'Opciones Paleo(Dieta basada en alimentos naturales no procesados)', value: 'paleo'},
+  {title: 'Opciones sin azúcar', value: 'sin azúcar'},
 ]
 
 export const ambianceOptions = [
-  {title: 'Al aire libre', value: 'al aire libre'},
-  {title: 'Terraza', value: 'terraza'},
+  {title: 'Espacios al aire libre', value: 'al aire libre'},
+  {title: 'Espacios en Terraza', value: 'terraza'},
   {title: 'Vista panorámica', value: 'vista panorámica'},
   {title: 'Decoración temática', value: 'decoración temática'},
   {title: 'Ambiente familiar', value: 'ambiente familiar'},
   {title: 'Para citas románticas', value: 'para citas románticas'},
   {title: 'Zona de baile', value: 'zona de baile'},
   {title: 'Pet-friendly', value: 'pet-friendly'},
-  {title: 'Se permite fumar', value: 'se permite fumar'},
+  {title: 'Se permite fumar en ciertos espacios', value: 'se permite fumar'},
 ]
 
 export const facilitiesOptions = [
@@ -31,9 +31,9 @@ export const facilitiesOptions = [
   {title: 'Carta de cocteles', value: 'carta de cocteles'},
   {title: 'Menú infantil', value: 'menú infantil'},
   {title: 'Acceso para discapacitados', value: 'acceso para discapacitados'},
-  {title: 'Aparcamiento gratuito', value: 'aparcamiento gratuito'},
+  {title: 'Parqueadero gratuito', value: 'aparcamiento gratuito'},
   {title: 'Entrega a domicilio', value: 'entrega a domicilio'},
-  {title: 'Para llevar', value: 'para llevar'},
+  {title: 'Entrega para llevar', value: 'para llevar'},
 ]
 
 export const entertainmentOptions = [
@@ -63,12 +63,15 @@ export const suitableForOptions = [
 ]
 
 export const paymentOptions = [
-  {title: 'Acepta pagos con tarjeta', value: 'acepta pagos con tarjeta'},
+  {title: 'Acepta pagos con tarjeta de credito', value: 'acepta pagos con tarjeta'},
+  {title: 'Acepta pagos con tarjeta debito', value: 'acepta pagos con tarjeta'},
   {title: 'Pago móvil (Apple Pay, Google Pay)', value: 'pago móvil (apple pay, google pay)'},
-  {title: 'Acepta vales de comida', value: 'acepta vales de comida'},
   {title: 'Reservación telefónica', value: 'reservación telefónica'},
   {title: 'Política de cancelación flexible', value: 'política de cancelación flexible'},
   {title: 'División de cuentas', value: 'división de cuentas'},
-  {title: 'Descuentos para miembros', value: 'descuentos para miembros'},
   {title: 'Programa de fidelización', value: 'programa de fidelización'},
+  {title: 'Acepta pago en dólares', value: 'acepta pago en dólares'},
+  {title: 'Acepta pago en euros', value: 'acepta pago en euros'},
+  {title: 'Nequi/Daviplata/TransfiYa', value: 'nequi-daviplata-transfiya'},
+  {title: 'Código QR', value: 'código qr'},
 ]
