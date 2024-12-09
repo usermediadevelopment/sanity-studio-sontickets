@@ -12,6 +12,15 @@ export const restaurantSchema = defineType({
   name: 'restaurant',
   title: 'Restaurant',
   type: 'document',
+  fieldsets: [
+    {
+      name: 'menu',
+      title: 'Menu',
+      options: {
+        collapsible: true, // Allows the fieldset to be collapsed
+      },
+    },
+  ],
   fields: [
     defineField({
       name: 'name',
@@ -48,12 +57,19 @@ export const restaurantSchema = defineType({
 
     defineField({
       name: 'pdfMenuFile',
-      title: 'PDF Menu File',
+      title: 'PDF File',
       type: 'file',
       options: {
         accept: 'application/pdf',
       },
-      validation: (Rule) => Rule.required(),
+      fieldset: 'menu',
+    }),
+
+    defineField({
+      name: 'urlMenuFile',
+      title: 'URL',
+      type: 'url',
+      fieldset: 'menu',
     }),
 
     defineField({

@@ -12,6 +12,15 @@ export const locationSchema = defineType({
   name: 'location',
   title: 'Location',
   type: 'document',
+  fieldsets: [
+    {
+      name: 'menu',
+      title: 'Menu',
+      options: {
+        collapsible: true, // Allows the fieldset to be collapsed
+      },
+    },
+  ],
   fields: [
     defineField({
       name: 'name',
@@ -106,10 +115,20 @@ export const locationSchema = defineType({
       of: [{type: 'image'}],
     }),
     defineField({
-      name: 'menu',
-      title: 'Menu',
-      type: 'array',
-      of: [{type: 'menuCategory'}],
+      name: 'pdfMenuFile',
+      title: 'PDF File',
+      type: 'file',
+      options: {
+        accept: 'application/pdf',
+      },
+      fieldset: 'menu',
+    }),
+
+    defineField({
+      name: 'urlMenuFile',
+      title: 'URL',
+      type: 'url',
+      fieldset: 'menu',
     }),
     defineField({
       name: 'schedule',
